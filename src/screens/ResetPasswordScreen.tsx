@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text } from 'react-native';
 
 import { IUserData, IButtons } from '../model';
-
+import { stylesGlobal } from '../styles';
 import CustomInput from '../components/CustomInput';
 import CustomButton from '../components/CustomButton';
 
@@ -25,8 +25,8 @@ const ResetPassword: React.FunctionComponent = () => {
   };
 
   return (
-    <View style={styles.root}>
-      <Text style={styles.title}>Reset Password</Text>
+    <View style={stylesGlobal.root}>
+      <Text style={stylesGlobal.title}>Reset Password</Text>
 
       <CustomInput
         placeholder="confirmation_code"
@@ -56,19 +56,5 @@ const ResetPassword: React.FunctionComponent = () => {
     </View>
   )
 };
-
-const styles = StyleSheet.create({
-  root: {
-    alignItems: 'center',
-    padding: 15,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#051C60',
-    marginVertical: 10,
-    textAlign: 'center',
-  },
-});
 
 export default ResetPassword;

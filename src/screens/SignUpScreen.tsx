@@ -3,7 +3,7 @@ import { useNavigation } from '@react-navigation/native';
 import { View, Text, StyleSheet } from 'react-native';
 
 import { IUserData, IButtons, TNavigation } from '../model';
-
+import { stylesGlobal } from '../styles';
 import CustomInput from '../components/CustomInput';
 import CustomButton from '../components/CustomButton';
 
@@ -37,8 +37,8 @@ const SignUpScreen: React.FunctionComponent = () => {
   };
 
   return (
-    <View style={styles.root}>
-      <Text style={styles.title}>Create an account</Text>
+    <View style={stylesGlobal.root}>
+      <Text style={stylesGlobal.title}>Create an account</Text>
 
       <CustomInput
         placeholder="email"
@@ -81,17 +81,6 @@ const SignUpScreen: React.FunctionComponent = () => {
 };
 
 const styles = StyleSheet.create({
-  root: {
-    alignItems: 'center',
-    padding: 15,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#051C60',
-    marginVertical: 10,
-    textAlign: 'center',
-  },
   text: {
     color: 'gray',
     marginVertical: 10,

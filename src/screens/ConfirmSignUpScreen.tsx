@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text } from 'react-native';
 
 import { IUserData, IButtons, TNavigation } from '../model';
-
+import { stylesGlobal } from '../styles';
 import CustomInput from '../components/CustomInput';
 import CustomButton from '../components/CustomButton';
 
@@ -34,8 +34,8 @@ const ConfirmSignUpScreen: React.FunctionComponent = () => {
   };
 
   return (
-    <View style={styles.root}>
-      <Text style={styles.title}>Confirm Sign Up</Text>
+    <View style={stylesGlobal.root}>
+      <Text style={stylesGlobal.title}>Confirm Sign Up</Text>
 
       <CustomInput
         placeholder="email"
@@ -58,19 +58,5 @@ const ConfirmSignUpScreen: React.FunctionComponent = () => {
     </View>
   )
 };
-
-const styles = StyleSheet.create({
-  root: {
-    alignItems: 'center',
-    padding: 15,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#051C60',
-    marginVertical: 10,
-    textAlign: 'center',
-  },
-});
 
 export default ConfirmSignUpScreen;

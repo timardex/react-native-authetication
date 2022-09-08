@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { View, Image, StyleSheet, Platform } from 'react-native';
+import { View, Image, StyleSheet } from 'react-native';
 
 import { IUserData, IButtons, TNavigation } from '../model';
+import { stylesGlobal } from '../styles';
 import CustomInput from '../components/CustomInput';
 import CustomButton from '../components/CustomButton';
 
@@ -42,7 +43,7 @@ const SignInScreen: React.FunctionComponent = () => {
   };
 
   return (
-    <View style={styles.root}>
+    <View style={stylesGlobal.root}>
       <Image
         source={require('../../assets/favicon.png')}
         style={styles.logo}
@@ -72,10 +73,6 @@ const SignInScreen: React.FunctionComponent = () => {
 };
 
 const styles = StyleSheet.create({
-  root: {
-    alignItems: 'center',
-    padding: 15,
-  },
   logo: {
     width: 100,
     height: 100,
