@@ -4,6 +4,7 @@ import { View, Image, StyleSheet } from 'react-native';
 
 import { IUserData, IButtons, TNavigation } from '../model';
 import { stylesGlobal } from '../styles';
+import { validation } from '../helpers';
 import CustomInput from '../components/CustomInput';
 import CustomButton from '../components/CustomButton';
 
@@ -29,7 +30,8 @@ const SignInScreen: React.FunctionComponent = () => {
   const handlePressed = (type: string): void => {
     switch(type) {
       case 'SIGN_IN':
-        navigation.navigate('HomeScreen');
+        validation(userData)
+        //navigation.navigate('HomeScreen');
         break;
       case 'FORGOT_PASSWORD':
         navigation.navigate('ForgotPasswordScreen');
