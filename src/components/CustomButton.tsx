@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, StyleSheet, Pressable, GestureResponderEvent } from 'react-native';
+import { Text, StyleSheet, TouchableOpacity, GestureResponderEvent } from 'react-native';
 
 import  { prettifyText } from '../helpers';
 
@@ -12,19 +12,19 @@ type Props = {
 
 const CustomButton: React.FunctionComponent<Props> = ({ onPress, text, bgColor = '#3B71F3', fgColor = 'white' }) => {
   return (
-    <Pressable
+    <TouchableOpacity
       onPress={onPress}
       style={[
         styles.container,
-        bgColor ? {backgroundColor: bgColor} : {},
+        bgColor ? { backgroundColor: bgColor } : {},
       ]}>
       <Text style={[
         styles.text,
-        fgColor ? {color: fgColor} : {}
+        fgColor ? { color: fgColor } : {}
       ]}>
         {prettifyText(text)}
       </Text>
-    </Pressable>
+    </TouchableOpacity>
   )
 };
 
@@ -41,6 +41,6 @@ const styles = StyleSheet.create({
     width: '100%',
     textAlign: 'center'
   }
-})
+});
 
 export default CustomButton;

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { View, Image, StyleSheet } from 'react-native';
+import { View, Image, StyleSheet, Platform } from 'react-native';
 
 import { IUserData, IButtons, TNavigation } from '../model';
 import CustomInput from '../components/CustomInput';

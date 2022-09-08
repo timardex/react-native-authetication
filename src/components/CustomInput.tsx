@@ -2,7 +2,7 @@ import * as React from 'react';
 import { View, StyleSheet, TextInput } from 'react-native';
 
 import { IUserData } from '../model';
-import  { prettifyText } from '../helpers';
+import { prettifyText } from '../helpers';
 
 type Props = {
   placeholder: string,
@@ -39,14 +39,14 @@ const styles = StyleSheet.create({
     borderColor: '#e8e8e8',
     borderWidth: 1,
     borderRadius: 5,
-    paddingHorizontal: 10,
     marginVertical: 5,
     marginHorizontal: 15,
   },
   input: {
     width: '100%',
-    padding: 10
+    paddingHorizontal: 10,
+    paddingVertical: 10,
   }
-})
+});
 
 export default CustomInput;
